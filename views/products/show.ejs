@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= production.name %> </title>
+</head>
+<body>
+    <h1><%= production.name %> </h1>
+    <ul>
+        <li>price: <%= production.price %> </li>
+        <li>category: <%= production.category %> </li>
+    </ul>
+    <a href="/products">all products</a><br>
+    <a href="/products/<%= production._id %>/edit ">edit products</a><br>
+    <form action="/products/<%= production._id %>?_method=DELETE " method="post">
+        <button>delete</button>
+    </form>
+</body>
+</html>
